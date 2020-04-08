@@ -3,7 +3,6 @@ import commonjs from 'rollup-plugin-commonjs'
 import external from 'rollup-plugin-peer-deps-external'
 import resolve from 'rollup-plugin-node-resolve'
 import { terser } from 'rollup-plugin-terser'
-import builtins from 'rollup-plugin-node-builtins'
 import globals from 'rollup-plugin-node-globals'
 
 export default {
@@ -18,7 +17,6 @@ export default {
   ],
   plugins: [
     globals(),
-    builtins(),
     external(),
     resolve(),
     typescript({
