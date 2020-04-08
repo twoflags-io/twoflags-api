@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "type": {
+      "type": "string",
+      "enum": ["boolean", "string", "number", "segment"]
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "active": {
+      "type": "boolean"
+    }
+  },
+  "required": ["id", "name", "type", "active"],
+  "additionalProperties": false
+}

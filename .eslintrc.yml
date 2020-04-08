@@ -1,0 +1,38 @@
+# Parse all files with TypeScript.
+parser: '@typescript-eslint/parser'
+parserOptions:
+  project: tsconfig.json
+  createDefaultProgram: true
+
+plugins:
+  - jest
+  - jest-dom
+  - '@typescript-eslint'
+
+env:
+  browser: true
+
+rules:
+  # Ignore variables prefixed with _ in unused checks.
+  no-unused-vars: off
+  '@typescript-eslint/no-unused-vars':
+    - error
+    - varsIgnorePattern: _
+      argsIgnorePattern: _
+
+  # Using camelcase can be necessary when integrating with some libs and APIs
+  '@typescript-eslint/camelcase': off
+
+  # Disable rules which conflict with prettier
+  '@typescript-eslint/indent': off
+  eol-last: off
+  func-call-spacing: off
+  function-paren-newline: off
+  implicit-arrow-linebreak: off
+  indent: off
+  no-spaced-func: off
+  object-curly-newline: off
+  object-curly-spacing: off
+  operator-linebreak: off
+  space-before-function-paren: off
+  wrap-iife: off

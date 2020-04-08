@@ -1,0 +1,31 @@
+name = "twoflags-service"
+type = "javascript"
+account_id = "<account-id>"
+entry-point = "build"
+workers_dev = false
+
+[env.api]
+route = "api.<yourdomain>/*"
+zone_id = "<zone-id>"
+
+kv-namespaces = [
+     { binding = "ENVIRONMENTS", id = "<environments-binding-id>" },
+	 { binding = "APIKEYS", id = "<apikeys-binding-id>" },
+	 { binding = "APIKEY", id = "<apikey-binding-id>" },
+	 { binding = "FLAGS", id = "<flags-binding-id>" },
+	 { binding = "NAMESPACES", id = "<namespaces-binding-id>" },
+	 { binding = "SEGMENTS", id = "<segments-binding-id>" },
+	 { binding = "SELECTORS", id = "<selectors-binding-id>" },
+	 { binding = "ACCOUNTS", id = "<accounts-binding-id>" },
+	 { binding = "VALUES", id = "<values-binding-id>" },
+	 { binding = "RESOLVER", id = "<resolver-binding-id>" }
+]
+
+[env.resolver]
+route = "resolver.<yourdomain>/*"
+zone_id = "<zone-id>"
+
+kv-namespaces = [
+	 { binding = "SEGMENTS", id = "<segments-binding-id>" },
+	 { binding = "RESOLVER", id = "<resolver-binding-id>" }
+]

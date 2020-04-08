@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 100
+    }
+  },
+  "required": ["id"],
+  "additionalProperties": false
+}

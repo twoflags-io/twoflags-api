@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "outDir": "build",
+    "module": "esnext",
+    "target": "esnext",
+    "lib": ["esnext", "webworker"],
+    "sourceMap": false,
+    "allowJs": false,
+    "importHelpers": false,
+    "declaration": false,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true
+  },
+  "external": ["tslib"],
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules", "build", "**/__tests__/**"]
+}

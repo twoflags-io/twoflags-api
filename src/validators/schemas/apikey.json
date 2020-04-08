@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string"
+    },
+    "created_by": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "last_used": {
+      "type": ["string", "null"]
+    }
+  },
+  "required": ["id", "key", "created_at", "created_by"],
+  "additionalProperties": false
+}

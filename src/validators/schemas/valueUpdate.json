@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "environment": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "namespace": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "id": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "value": {
+      "type": ["string", "number", "boolean", "null", "object"]
+    }
+  },
+  "required": ["environment", "namespace", "id", "value"],
+  "additionalProperties": false,
+  "oneOf": [
+    {
+      "properties": {
+        "value": {
+          "type": "string",
+          "maxLength": 100
+        }
+      }
+    },
+    {
+      "properties": {
+        "value": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "maxLength": 60
+            },
+            "value": {
+              "type": "string",
+              "maxLength": 100
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "value": {
+          "type": ["number", "boolean", "null"]
+        }
+      }
+    }
+  ]
+}
