@@ -19,3 +19,12 @@ It supports:
 - [API Documentation](https://twoflags-io.github.io/twoflags/) With OpenAPI 3.0 spec.   
 
 To install on your own Cloudflare Account follow the steps in [INSTALL](./INSTALL.md)
+
+# Authors
+
+Ernesto F. [@efreyreg](https://twitter.com/efreyreg)
+&
+Julio M. [@julio_menendez](https://twitter.com/julio_menendez)
+
+PS: If you want to take it for a spin, send us a message so we can create you a trial 
+account on a demo environment we hosted on https://api.twoflags.io
