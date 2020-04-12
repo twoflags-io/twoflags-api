@@ -8,12 +8,20 @@ export const withStatus = (status: number = 200, headers?: any) => ({
 export const withJSON = (status: number = 200, headers?: any) =>
   withStatus(status, { ...headers, 'Content-Type': 'application/json' })
 
+export interface LogRegistry {
+  message: string
+  environment?: string
+  namespace?: string
+  flag?: string
+  value?: any
+}
 export interface HTTPContext {
   pathname: string
   body?: any
   headers: Headers
   query?: URLSearchParams
   user: any
+  logging?: (log: LogRegistry) => void
 }
 
 export type HTTPHandler = (context: HTTPContext) => Promise<Response>
