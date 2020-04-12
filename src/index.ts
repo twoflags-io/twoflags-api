@@ -1,11 +1,11 @@
 import { handleOptions } from './common/cors'
 import { handleRequest } from './common/handler'
 
-function handler(event: any) {
+function handler(event: FetchEvent) {
   if (event.request.method === 'OPTIONS') {
     event.respondWith(handleOptions(event.request))
   } else {
-    event.respondWith(handleRequest(event.request))
+    event.respondWith(handleRequest(event))
   }
 }
 

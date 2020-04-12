@@ -36,7 +36,7 @@ export async function createAPIKey(context: HTTPContext) {
     created_by: context.user.sub,
     created_at: new Date().toISOString()
   }
-  const keyUse = { sub: key.created_by, last_used: null }
+  const keyUse = { sub: key.created_by, last_used: null, name: context.body.id }
 
   await APIKEY.put(key.key, JSON.stringify(keyUse))
 

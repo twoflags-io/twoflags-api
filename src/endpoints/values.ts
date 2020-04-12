@@ -53,6 +53,16 @@ export async function updateValue(context: HTTPContext) {
     return new Response(null, withStatus(404))
   }
 
+  if (context.logging) {
+    context.logging({
+      message: `Flag "${context.body.id}" updated value`,
+      environment: context.body.environment,
+      namespace: context.body.namespace,
+      flag: context.body.id,
+      value: isObject(value) ? (value as SelectorValue).value : value
+    })
+  }
+
   return new Response(null, withStatus(204))
 }
 
