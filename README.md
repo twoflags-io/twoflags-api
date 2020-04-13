@@ -14,6 +14,7 @@ It supports:
     - Segment progression doesn't affect previous values. 
     - (Coming soon) User Overrides
 - API Keys
+- Datadog Logging. (https://www.datadoghq.com/) (_Other Log solutions on the roadmap_)
 - Optimized Resolver Endpoint
 - [React SDK](https://www.npmjs.com/package/@twoflags/react-featureflags)
 - [API Documentation](https://twoflags-io.github.io/twoflags/) With OpenAPI 3.0 spec.   
