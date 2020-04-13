@@ -154,6 +154,13 @@ $ wrangler kv:key put --env api --binding=ACCOUNTS "a15a1..." '{"email":"you@you
 ✨  Success
 ``` 
 
+To activate Datadog (https://www.datadoghq.com/) logging you can add the detail of the integration on the acccount object
+
+```
+$ wrangler kv:key put --env api --binding=ACCOUNTS "a15a1..." '{"email":"you@yourdomain.com", logging: {"type": "datadog", "apiKey": "120af0..."}}'
+✨  Success
+``` 
+
 Next lets create an API Key be able to use all API Endpoints. We can use a 
 UUID v4 as API Key.
 
