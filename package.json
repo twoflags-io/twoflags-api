@@ -22,7 +22,7 @@
     "@types/jest": "^24.0.24",
     "@typescript-eslint/eslint-plugin": "^2.26.0",
     "@typescript-eslint/parser": "^2.26.0",
-    "async": "^1.5.0",
+    "async": "^2.6.4",
     "babel-eslint": "^10.1.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-config-standard-jsx": "^8.1.0",
